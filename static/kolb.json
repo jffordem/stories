@@ -1,0 +1,130 @@
+{
+	"name": "Kolb and the Dragon",
+	"description": "Choose your own adventure easter egg from Skyrim.",
+	"pages": [{
+			"index": 1,
+			"text": "Kolb was a brave Nord warrior. One day his Chief asked Kolb to slay an evil dragon that threatened their village. \"Go through the mountain pass, Kolb\", his Chief said. \"You will find the Dragon on the other side.\"",
+			"choices": {
+				"Continue": 2
+			}
+		}, {
+			"index": 2,
+			"text": "Kolb took his favorite axe and shield and walked to the pass, where he found a cold cave, a windy cave, and a narrow trail.",
+			"choices": {
+				"Enter the cold cave": 17,
+				"Enter the windy cave": 8,
+				"Walk up the trail": 12
+			}
+		}, {
+			"index": 3,
+			"text": "Kolb stepped onto a rocky hill. He could see the dragon sleeping below, and a tavern off a road nearby.",
+			"choices": {
+				"Climb down": 16,
+				"Visit tavern": 14
+			}
+		}, {
+			"index": 4,
+			"text": "Following the stench, Kolb found a filthy orc! The orc snarled and charged Kolb with his spiked club.",
+			"choices": {
+				"Raise Shield": 9,
+				"Swing Axe": 13
+			}
+		}, {
+			"index": 5,
+			"text": "Treading through the marsh, Kolb discovered a wailing ghost blocking his way.",
+			"choices": {
+				"Attack Ghost": 15,
+				"Give Gold": 10
+			}
+		}, {
+			"index": 6,
+			"text": "The head of the axe lodged itself in the tough, scaly neck of the beast. It wailed and thrashed, but Kolb held on and eventually sawed through the neck, killing the beast. Kolb returned home victorious, and his village was never bothered by the dragon again. THE END.",
+			"result": "success",
+			"choices": {
+				"Back to beginning": 1,
+				"Quit": 0
+			}
+		}, {
+			"index": 7,
+			"text": "Leaving the marsh behind him, Kolb could see the dragon's lair nearby, as well as a small, welcoming tavern.",
+			"choices": {
+				"Go to the Lair": 16,
+				"Go to Tavern": 14
+			}
+		}, {
+			"index": 8,
+			"text": "A strong gust of wind blew Kolb's torch out, and knocked him into a pit where split [sic] his head and died.  THE END.",
+			"result": "failure",
+			"choices": {
+				"Back to beginning": 1,
+				"Quit": 0
+			}
+		}, {
+			"index": 9,
+			"text": "The orc cackled as his club splintered Kolb's shield and smashed into his face. There Kolb died, and the orc had soup from his bones.  THE END.",
+			"result": "failure",
+			"choices": {
+				"Back to beginning": 1,
+				"Quit": 0
+			}
+		}, {
+			"index": 10,
+			"text": "Kolb remembered a story his Gran told him and tossed two gold chits for the ghost, and it faded away, allowing him to pass.",
+			"choices": {
+				"Continue": 7
+			}
+		}, {
+			"index": 11,
+			"text": "Kolb crept towards the belly of the beast, but no sooner had he taken his eyes off the head of the beast than it snapped him up and ate him whole, axe and all.  THE END.",
+			"result": "failure",
+			"choices": {
+				"Back to beginning": 1,
+				"Quit": 0
+			}
+		}, {
+			"index": 12,
+			"text": "Climbing up, Kolb found a camp. He met a wise man who shared bread and showed two paths to the dragon's lair. One went through the hills, the other through a marsh.",
+			"choices": {
+				"Take the hills": 3,
+				"Take the marsh": 5
+			}
+		}, {
+			"index": 13,
+			"text": "Before the orc could strike, Kolb swung his mighty axe. The orc's head and club fell uselessly to the floor.",
+			"choices": {
+				"Continue": 3
+			}
+		}, {
+			"index": 14,
+			"text": "Kolb stopped at the tavern to rest before fighting the dragon. High elves ran the tavern, however, and poisoned his mead so they could steal his gold.  THE END.",
+			"result": "failure",
+			"choices": {
+				"Back to beginning": 1,
+				"Quit": 0
+			}
+		}, {
+			"index": 15,
+			"text": "Kolb swung his axe as hard as he could, but the ghost hardly seemed to notice. The ghost drifted into Kolb, and a deep sleep took him over, from which he never awoke.  THE END.",
+			"result": "failure",
+			"choices": {
+				"Back to beginning": 1,
+				"Quit": 0
+			}
+		}, {
+			"index": 16,
+			"text": "Kolb found the lair where the dragon slept, tendrils of smoke wafting from it's [sic] nostrils. The air made Kolb's eyes sting, and he nearly slipped on the bones of men, picked clean. The beast lay on its side, the throat and belly both waiting targets.",
+			"choices": {
+				"Strike the Neck": 6,
+				"Strike the Belly": 11
+			}
+		}, {
+			"index": 17,
+			"text": "Kolb stepped into the frozen cave, but his Nord blood kept him warm. A smelly tunnel climbed ahead of him, and wind howled from another to his left. A ladder was nearby as well.",
+			"choices": {
+				"Take the smelly tunnel": 4,
+				"Take the windy tunnel": 8,
+				"Climb the ladder": 12
+			}
+		}
+	]
+}

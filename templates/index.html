@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <!-- stories = [ array of story objects ]-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <body>
+        <h1>Stories</h1>
+        <ul>
+            {% for story in stories %}
+            <li><a href="{{url_for('read_story',story_id=story.story_id,page_id=0)}}">{{story.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
