@@ -105,7 +105,7 @@ def show_projects():
     return render_template('index.html', stories=Stories.query.all())
 
 @app.route('/story/<int:story_id>/<int:page_id>', methods=['GET'])
-def read_story(story_id: int, page_id: int):
+def read_story(story_id, page_id):
     story = Stories.query.filter_by(story_id=story_id).first()
     page = getPage(story_id, page_id)
     result = resultFromOutcome(page.outcome)
