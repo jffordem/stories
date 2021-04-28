@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--
+        story: story object
+        page: array of page objects
+        choices: array of choice objects for this page
+    -->
+    <style>
+        .success {
+            color: green;
+        }
+        
+        .failure {
+            color: red;
+        }
+    </style>
+    <body>
+        <h1>{{story.title}}</h1>
+        <div class="card mt-5">
+            <h4 class="{{result}}">{{page.text}}</h4>
+            {% for choice in choices %}
+            <ul>
+                <li><a href="{{url_for('read_story',story_id=choice.story_id,page_id=choice.to_page)}}">{{choice.text}}</a></li>
+            </ul>
+            {% endfor %}
+        <br>
+        <a href="{{url_for('show_projects')}}">Back to stories list.</a>
+    </body>
+</html>
