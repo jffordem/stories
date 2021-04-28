@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import json, os
+from config import config
 
 __doc__ = """
 This is meant to run in pythonanywhere.com and use their built-in mysql database.
@@ -19,15 +20,15 @@ C:> flask db_load_stories
 """
 
 db_conn = 'mysql+mysqlconnector://{user}:{passwd}@{host}/{database}'.format(
-    user=os.environ['MYSQL_USER'],
-    passwd=os.environ['MYSQL_PASS'],
-    host=os.environ['MYSQL_SERVER'],
-    database=os.environ['MYSQL_DATABASE'])
+    user=config['MYSQL_USER'],
+    passwd=config['MYSQL_PASS'],
+    host=config['MYSQL_SERVER'],
+    database=config['MYSQL_DATABASE'])
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_conn
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+app.config['SECRET_KEY'] = config['SECRET_KEY']
 
 db = SQLAlchemy(app)
 
@@ -94,6 +95,11 @@ def resultFromOutcome(outcome):
     if outcome > 0: return 'success'
     return ''
 
+def tryGetValue(d, k, default=''):
+    if k in d:
+        return d[k]
+    return default
+
 def getPage(story_id, page_id):
     if page_id == 0:
         return Pages.query.filter_by(story_id=story_id).first()
@@ -127,7 +133,7 @@ def loadStory(jsonFile):
         for page in story['pages']:
             index = page['index']
             text = page['text']
-            outcome = outcomeFromResult(page['result'])
+            outcome = outcomeFromResult(tryGetValue(page, 'result'))
             page_row = Pages(story_id=story_row.story_id, text=text, outcome=outcome)
             db.session.add(page_row) # pylint: disable=maybe-no-member
             db.session.commit() # pylint: disable=maybe-no-member
