@@ -163,4 +163,5 @@ def dbReset():
 @app.cli.command('db_load_stories')
 def dbLoadStories():
     loadStory("static/kolb.json")
+    loadStory("static/zork.json")
     print("Stories loaded")
